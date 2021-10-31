@@ -10,8 +10,6 @@ import (
 func SendEmail(emailAddress []byte) {
 	from := os.Getenv("FROM_EMAIL")
 	password := os.Getenv("EMAIL_PASS")
-	fmt.Println(from, password)
-
 	email := mail.NewMessage()
 
 	email.SetHeader("From", from)
